@@ -1,10 +1,19 @@
 package Homework_202308_30;
 
 public enum Size {
-    Small,
-    Medium,
-    Large,
-    XLarge,
+    small ("S"),
+    Medium ("M"),
+    Large ("L"),
+    XLarge ("XL");
+    private final String symbol;
+
+    Size(String symbol) {
+        this.symbol = symbol;
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
 }
 class Clothing extends Product {
     private Size size;
