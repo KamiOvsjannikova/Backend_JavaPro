@@ -1,10 +1,11 @@
 package Homework_202308_30;
-
+//1.2. Size - Перечисление для представления размеров одежды:
+//??????
 public enum Size {
-    small ("S"),
-    Medium ("M"),
-    Large ("L"),
-    XLarge ("XL");
+    SMALL ("S"),
+    MEDIUM ("M"),
+    LARGE ("L"),
+    XLARGE ("XL");
     private final String symbol;
 
     Size(String symbol) {
@@ -15,19 +16,5 @@ public enum Size {
         return symbol;
     }
 }
-class Clothing extends Product {
-    private Size size;
 
-    public Clothing(int id, String name, ProductCategory category, double price, Currency currency, Size size) {
-        super(id, name, category, price, currency);
-        this.size = size;
-    }
 
-    public Size getSize() {
-        return size;
-    }
-
-    public void setSize(Size size) {
-        this.size = size;
-    }
-}
